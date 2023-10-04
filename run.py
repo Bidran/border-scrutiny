@@ -69,6 +69,23 @@ def newLine():
     """
     print('\n')
 
+def randomRule():
+    random_fname_man = random.choice(first_name_men)
+    random_fname_woman = random.choice(first_name_women)
+    random_lname_man = random.choice(last_name_men)
+    random_lname_woman = random.choice(last_name_women)
+    both_first = [random_fname_man, random_fname_woman]
+    both_last = [random_lname_man, random_lname_woman]
+    random_fname_chosen = random.choice(both_first)
+    random_lname_chosen = random.choice(both_last)
+    random_age = random.choice(range(10,100))
+    print(random_fname_chosen, random_lname_chosen, random_age)
+
+randomRule()
+
+def rulesToday():
+    typingPrint('Alright, the rule for today is this: \n')
+    typingPrint(f'Don')
 
 def beginGame():
     """
