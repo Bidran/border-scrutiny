@@ -148,6 +148,15 @@ def beginGame():
 def letTrough():
     if (random_fname_chosen == first_person_name):
         print('AYYY')
+    elif (random_lname_chosen == first_person_surname):
+        print('BBBB')
+    elif (random_age == first_person_age):
+        print('CCCC')
+    elif (random_country_chosen == first_person_country):
+        print('DDDD')
+    elif (first_person_possession == 'Gun' or first_person_possession == 'Knife'):
+        print('EEEE')
+
 
 def borderCheck():
     border_input = input(f'Do you let this person trough the border? ({green}yes{white} or {red}no{white}): \n')
@@ -178,6 +187,18 @@ def main():
     borderCheck()
     firstPerson()
     borderCheck() 
+    firstPerson()
+    borderCheck()
+    firstPerson()
+    borderCheck()
+    firstPerson()
+    borderCheck()
+    firstPerson()
+    borderCheck()
+    firstPerson()
+    borderCheck()
+    firstPerson()
+    borderCheck()
     firstPerson()
     borderCheck()
     firstPerson()
