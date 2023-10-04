@@ -42,7 +42,7 @@ possesion = [
 def makePerson():
     persons = [makeMan(), makeWoman()]
     chosen = random.choice(persons)
-    print(chosen)
+    return chosen
     
 
 def makeMan():
@@ -51,7 +51,7 @@ def makeMan():
     age = random.choice(range(10,100))
     random_country = random.choice(origin_country)
     random_possesion = random.sample(possesion, 3)
-    return [random_fname,random_lname,age,random_country,random_possesion]
+    return random_fname,random_lname,age,random_country,random_possesion
     
 def makeWoman():
     random_fname = random.choice(first_name_women)
@@ -59,7 +59,7 @@ def makeWoman():
     age = random.choice(range(10,100))
     random_country = random.choice(origin_country)
     random_possesion = random.sample(possesion, 3)
-    return [random_fname,random_lname,age,random_country,random_possesion]
+    return random_fname,random_lname,age,random_country,random_possesion
     
 
 
@@ -74,6 +74,10 @@ white = '\033[1;37;40m'
 green = '\033[1;32;40m'
 
 def randomRule():
+    global random_fname_chosen
+    global random_lname_chosen
+    global random_country_chosen
+    global random_age
     random_fname_man = random.choice(first_name_men)
     random_fname_woman = random.choice(first_name_women)
     random_lname_man = random.choice(last_name_men)
@@ -91,6 +95,12 @@ def randomRule():
     typingPrint("Don't let anyone who has any of these: \n")
     typingPrint(f"First name: {red}{random_fname_chosen}{white} \nLast name: {red}{random_lname_chosen}{white} \nCountry: {red}{random_country_chosen}{white} \nAge: {red}{random_age} years old{white}\n")
     typingPrint(f'And remember never let in anyone who has a {red}Knife{white} or a {red}Gun{white}\n')
+    return random_fname_chosen
+    return random_lname_chosen
+    return random_country_chosen
+    return random_age
+
+
 
 
 
@@ -140,5 +150,7 @@ def main():
     """
     introduction()
     beginGame()
+    print(random_age)
+
 
 main()
