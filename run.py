@@ -28,6 +28,10 @@ last_name_women = [
     'Ilyina','Yegorova','Titova'
     ]
 
+origin_country = [
+    'Novoslavia','Tashkarsk','Dushkovia','Arktovia','Kazakhrad',
+    'Bolskaya','Sputnikstan','Molotovia'
+    ] 
 
 def makePerson():
     persons = [makeMan(), makeWoman()]
@@ -39,13 +43,15 @@ def makeMan():
     random_fname = random.choice(first_name_men)
     random_lname = random.choice(last_name_men)
     age = random.choice(range(10,100))
-    return [random_fname,random_lname,age]
+    random_country = random.choice(origin_country)
+    return [random_fname,random_lname,age,random_country]
     
 def makeWoman():
     random_fname = random.choice(first_name_women)
     random_lname = random.choice(last_name_women)
     age = random.choice(range(10,100))
-    return [random_fname,random_lname,age]
+    random_country = random.choice(origin_country)
+    return [random_fname,random_lname,age,random_country]
     
 makePerson()
 
