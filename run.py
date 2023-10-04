@@ -13,7 +13,7 @@ def typingPrint(text):
     for character in text:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.01)
+        time.sleep(0.02)
 
 
 """
@@ -69,7 +69,7 @@ def makeMan():
     global random_fname, random_lname, age, random_country, random_possession
     random_fname = random.choice(first_name_men)
     random_lname = random.choice(last_name_men)
-    age = random.choice(range(10, 100))
+    age = random.choice(range(20, 29))
     random_country = random.choice(origin_country)
     random_possession = random.choice(possession)
     return random_fname, random_lname, age, random_country, random_possession
@@ -82,7 +82,7 @@ def makeWoman():
     global random_fname, random_lname, age, random_country, random_possession
     random_fname = random.choice(first_name_women)
     random_lname = random.choice(last_name_women)
-    age = random.choice(range(10, 100))
+    age = random.choice(range(20, 29))
     random_country = random.choice(origin_country)
     random_possession = random.choice(possession)
     return random_fname, random_lname, age, random_country, random_possession
@@ -124,7 +124,7 @@ def randomRule():
     else:
         random_lname_chosen = random_lname_woman
     random_country_chosen = random.choice(origin_country)
-    random_age = random.choice(range(10, 100))
+    random_age = random.choice(range(20, 29))
     newLine()
     typingPrint('Alright, the rule for today is: \n')
     typingPrint("Don't let anyone trough who has any of these: \n")
@@ -283,7 +283,7 @@ def introduction():
     newLine()
     username = input("Type in your name and press return: \n")
     newLine()
-    typingPrint(f"Well officer {green}{username} {white}, seems like"
+    typingPrint(f"Well, officer {green}{username} {white}, seems like"
                 f" you got the short end of the stick today.\nThere are enemy"
                 f" spies all over the place. \n")
     typingPrint('The boss tells us each day who we can let in the motherland\n'
