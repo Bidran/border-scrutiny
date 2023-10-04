@@ -5,7 +5,7 @@ def typingPrint(text):
   for character in text:
     sys.stdout.write(character)
     sys.stdout.flush()
-    time.sleep(0.03)
+    time.sleep(0.01)
 
 
 first_name_men = [
@@ -79,9 +79,11 @@ def randomRule():
     random_lname_man = random.choice(last_name_men)
     random_lname_woman = random.choice(last_name_women)
     both_first = [random_fname_man, random_fname_woman]
-    both_last = [random_lname_man, random_lname_woman]
     random_fname_chosen = random.choice(both_first)
-    random_lname_chosen = random.choice(both_last)
+    if random_fname_chosen == random_fname_man:
+        random_lname_chosen = random_lname_man
+    else:
+       random_lname_chosen = random_lname_woman
     random_country_chosen = random.choice(origin_country)
     random_age = random.choice(range(10,100))
     newLine()
@@ -90,7 +92,7 @@ def randomRule():
     typingPrint(f"First name: {red}{random_fname_chosen}{white} \nLast name: {red}{random_lname_chosen}{white} \nCountry: {red}{random_country_chosen}{white} \nAge: {red}{random_age} years old{white}\n")
     typingPrint(f'And remember never let in anyone who has a {red}Knife{white} or a {red}Gun{white}\n')
 
-
+randomRule()
 
 
 
@@ -123,7 +125,7 @@ def introduction():
     Short introduction which takes the players name with a short description
     """
     newLine()
-    typingPrint("Zdravstvuy comrade, welcome to the border. What's your name? \n")
+    typingPrint(f"Zdravstvuy {red}comrade{white}, welcome to the border. What's your name? \n")
     newLine()
     username = input("Type in your name and press return: \n")
     newLine()
@@ -135,4 +137,4 @@ def introduction():
 def main():
     introduction()
 
-main()
+# main()
