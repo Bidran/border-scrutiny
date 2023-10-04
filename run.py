@@ -3,6 +3,7 @@ import os
 import sys
 import random
 from random import choice
+from art import *
 
 
 def typingPrint(text):
@@ -272,11 +273,15 @@ def borderCheck():
 
 def introduction():
     """
-    Short introduction which takes the players name with a short description
+    Short introduction which takes the players name with a short description with an 
     """
+    print(f'{yellow}')
+    Art=text2art("Border Scrutiny")
+    print(Art)
     newLine()
-    typingPrint(f"Zdravstvuy {red}comrade{white}, welcome to the border."
-                f"What's your name? \n")
+    print('')
+    typingPrint(f"{white}Zdravstvuy {red}comrade{white}, welcome to the border."
+                f" What's your name? \n")
     newLine()
     username = input("Type in your name and press return: \n")
     newLine()
@@ -296,7 +301,11 @@ def anotherDay():
     if play_again.lower() == 'yes':
         main()
     elif play_again.lower() == 'no':
-        print('Thank you for playing!')
+        newLine()
+        print(f'{yellow}')
+        Art=text2art("Game over!")
+        print(Art)
+        print(f'{white}')
         newLine()
     else:
         newLine()
