@@ -98,10 +98,10 @@ def newLine():
 """
 ANSI color values which are used troughout the code.
 """
-red = '\033[0;31;40m'
+red = '\033[0;31;0m'
 white = "\033[0m"
-green = '\033[0;32;40m'
-yellow = '\033[0;33;40m'
+green = '\033[0;32;0m'
+yellow = '\033[0;33;0m'
 
 
 def randomRule():
