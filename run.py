@@ -1,4 +1,5 @@
-import time,os,sys
+import time,os,sys,random
+from random import choice
 
 def typingPrint(text):
   for character in text:
@@ -27,8 +28,30 @@ last_name_women = [
     'Ilyina','Yegorova','Titova'
     ]
 
+def makePerson():
+    persons = [makeMan(), makeWoman()]
+    chosen = random.choice(persons)
+    print(chosen)
+    
+
+def makeMan():
+    random_fname = random.choice(first_name_men)
+    random_lname = random.choice(last_name_men)
+    return [random_fname,random_lname]
+    
+def makeWoman():
+    random_fname = random.choice(first_name_women)
+    random_lname = random.choice(last_name_women)
+    return [random_fname,random_lname]
+    
+makePerson()
+
 def newLine():
+    """
+    Makes space for readability
+    """
     print('\n')
+
 
 def beginGame():
     """
@@ -67,4 +90,4 @@ def introduction():
 
 def main():
     introduction()
-main()
+# main()
