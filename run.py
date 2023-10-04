@@ -1,4 +1,7 @@
-import time,os,sys,random
+import time
+import os
+import sys
+import random
 from random import choice
 
 def typingPrint(text):
@@ -206,11 +209,17 @@ def introduction():
     newLine()
     username = input("Type in your name and press return: \n")
     newLine()
-    typingPrint(f'Well officer \033[1;32m{username} \033[1;37;40m, seems like you have got the short end of the stick today.\nThere are enemy spies all over the place. \n')
-    typingPrint('The boss tells us who we can let in the motherland based on his information each day. \n')
-    typingPrint('You will either gain money or lose it depending on how well you do.\n')
+    typingPrint(f"Well officer \033[1;32m{username} \033[1;37;40m, seems like you got the short end of the stick today.\nThere are enemy spies all over the place. \n")
+    typingPrint('The boss tells us each day who we can let in the motherland based on new information. \n')
+    typingPrint('You will either earn money or lose it depending on how well you do.\n')
     
 
+def anotherDay():
+    play_again = input(f'Your money stays with you. \nDo you want to keep going another day? ({green}yes{white}/{red}no{white}): \n')
+    if play_again.lower() == 'yes':
+        main()
+    elif play_again.lower() == 'no':
+        print('Thank you for playing!')
 
 
 def finalScore():
@@ -218,12 +227,12 @@ def finalScore():
         print(f'{green}You have ${money}!{white}')
     else:
         print(f'{red}You have {money} dollars!{white}')
+    return money
 
 def main():
     """
     Main function which calls others when required
     """
-    introduction()
     beginGame()
     newLine()
     firstPerson()
@@ -238,4 +247,7 @@ def main():
     borderCheck()
     newLine()
     finalScore()
+    anotherDay()
+
+introduction()
 main()
