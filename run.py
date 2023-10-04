@@ -143,6 +143,7 @@ def beginGame():
             beginGame()
         elif user_input_no.lower() == 'no':
             typingPrint("Bye!")
+            exit()
         else:
             print('Type yes or no')
             beginGame()
@@ -199,6 +200,9 @@ def borderCheck():
         letTrough()
     elif border_input.lower() == 'no':
         dontLetTrough()
+    else:
+        print('Type yes or no')
+        borderCheck()
     
 def introduction():
     """
@@ -220,6 +224,11 @@ def anotherDay():
         main()
     elif play_again.lower() == 'no':
         print('Thank you for playing!')
+    else:
+        newLine()
+        print('Type yes or no')
+        newLine()
+        anotherDay()
 
 
 def finalScore():
