@@ -7,6 +7,9 @@ from art import *
 
 
 def typingPrint(text):
+    """
+    Text effect.
+    """
     for character in text:
         sys.stdout.write(character)
         sys.stdout.flush()
@@ -14,7 +17,7 @@ def typingPrint(text):
 
 
 """
-Various lists from which functions will pull data
+Various lists from which functions will pull data.
 """
 
 first_name_men = [
@@ -51,7 +54,7 @@ def makePerson():
 
     """
     Chooses a random choice between a man and a woman
-    functions and returns the choice
+    functions and returns the choice.
     """
 
     persons = [makeMan(), makeWoman()]
@@ -61,7 +64,7 @@ def makePerson():
 
 def makeMan():
     """
-    Pulls random values from lists which will create a profile of a man
+    Pulls random values from lists which will create a profile of a man.
     """
     global random_fname, random_lname, age, random_country, random_possession
     random_fname = random.choice(first_name_men)
@@ -74,7 +77,7 @@ def makeMan():
 
 def makeWoman():
     """
-    Pulls random values from lists which will create a profile of a woman
+    Pulls random values from lists which will create a profile of a woman.
     """
     global random_fname, random_lname, age, random_country, random_possession
     random_fname = random.choice(first_name_women)
@@ -87,13 +90,13 @@ def makeWoman():
 
 def newLine():
     """
-    Makes space for readability
+    Makes space for readability.
     """
     print('\n')
 
 
 """
-ANSI color values which are used troughout the code
+ANSI color values which are used troughout the code.
 """
 red = '\033[1;31;40m'
 white = '\033[1;37;40m'
@@ -104,7 +107,7 @@ yellow = '\033[1;33;40m'
 def randomRule():
     """
     Pulls the value from lists and creates a profile of a person and saves it
-    to global variables which will be used in other parts of the program
+    to global variables which will be used in other parts of the program.
     """
     global random_fname_chosen
     global random_lname_chosen
@@ -136,7 +139,7 @@ def randomRule():
 
 def firstPerson():
     """
-    Creates a person which is used to compare attributes with forbidden ones
+    Creates a person which is used to compare attributes with forbidden ones.
     """
     global first_person_name
     global first_person_surname
@@ -257,7 +260,7 @@ def dontLetTrough():
 
 def borderCheck():
     """
-    Input function which takes values yes and no, calling previous functions
+    Input function which takes values yes and no, calling previous functions.
     """
     border_input = input(f'Do you let this person trough the border?'
                          f'({green}yes{white} or {red}no{white}): \n')
@@ -273,15 +276,15 @@ def borderCheck():
 
 def introduction():
     """
-    Short introduction which takes the players name with a short description with an 
+    Short introduction which takes the players name with a short description.
     """
     print(f'{yellow}')
-    Art=text2art("Border Scrutiny")
+    Art = text2art("Border Scrutiny")
     print(Art)
     newLine()
     print('')
-    typingPrint(f"{white}Zdravstvuy {red}comrade{white}, welcome to the border."
-                f" What's your name? \n")
+    typingPrint(f"{white}Zdravstvuy {red}COMRADE{white}, welcome to the border"
+                f". What's your name? \n")
     newLine()
     username = input("Type in your name and press return: \n")
     newLine()
@@ -295,6 +298,9 @@ def introduction():
 
 
 def anotherDay():
+    """
+    Restart the game, saving your current earned money.
+    """
     play_again = input(f'Your money stays with you. \nDo you want to keep'
                        f' going another day? ({green}yes{white}/{red}no'
                        f'{white}): \n')
@@ -303,7 +309,7 @@ def anotherDay():
     elif play_again.lower() == 'no':
         newLine()
         print(f'{yellow}')
-        Art=text2art("Game over!")
+        Art = text2art("Game over!")
         print(Art)
         print(f'{white}')
         newLine()
@@ -316,16 +322,19 @@ def anotherDay():
 
 
 def finalScore():
+    """
+    Add money to total and display to player.
+    """
     if money > 1:
-        print(f'{green}You have ${money}!{white}')
+        print(f'{green}You have ${money}!{white}\n')
     else:
-        print(f'{red}You have {money} dollars!{white}')
+        print(f'{red}You have {money} dollars!{white}\n')
     return money
 
 
 def main():
     """
-    Main function which calls others when required
+    Main function which calls others when required.
     """
     beginGame()
     newLine()
