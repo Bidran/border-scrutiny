@@ -70,7 +70,6 @@ def newLine():
     print('\n')
 
 red = '\033[1;31;40m'
-
 white = '\033[1;37;40m'
 green = '\033[1;32;40m'
 
@@ -85,6 +84,7 @@ def randomRule():
     random_lname_chosen = random.choice(both_last)
     random_country_chosen = random.choice(origin_country)
     random_age = random.choice(range(10,100))
+    newLine()
     typingPrint('Alright, the rule for today is: \n')
     typingPrint("Don't let anyone who has any of these: \n")
     typingPrint(f"First name: {red}{random_fname_chosen}{white} \nLast name: {red}{random_lname_chosen}{white} \nCountry: {red}{random_country_chosen}{white} \nAge: {red}{random_age} years old{white}\n")
@@ -98,9 +98,10 @@ def beginGame():
     """
     Takes players input if he wishes to proceed with the game.
     """
+    newLine()
     user_input = input(f'Are you ready to begin? ({green}yes{white}/{red}no{white}): \n')
     if user_input.lower() == 'yes':
-        print('user typed yes')
+        randomRule()
     elif user_input.lower() == 'no':
         typingPrint("Off to jail with you! \n")
         user_input_no = input(f'Did you change your mind? ({green}yes{white}/{red}no{white}): \n')
@@ -115,7 +116,7 @@ def beginGame():
         print('Type yes or no')
         beginGame()
 
-beginGame()
+
 
 def introduction():
     """
@@ -133,4 +134,5 @@ def introduction():
 
 def main():
     introduction()
-# main()
+
+main()
