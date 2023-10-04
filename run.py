@@ -95,9 +95,9 @@ def randomRule():
     random_age = random.choice(range(10,100))
     newLine()
     typingPrint('Alright, the rule for today is: \n')
-    typingPrint("Don't let anyone who has any of these: \n")
+    typingPrint("Don't let anyone trough who has any of these: \n")
     typingPrint(f"First name: {red}{random_fname_chosen}{white} \nLast name: {red}{random_lname_chosen}{white} \nCountry: {red}{random_country_chosen}{white} \nAge: {red}{random_age} years old{white}\n")
-    typingPrint(f'And remember never let in anyone who has a {red}Knife{white} or a {red}Gun{white}\n')
+    typingPrint(f'And remember never let in anyone who has a {red}Knife{white} or a {red}Gun{white}.\n')
     return random_fname_chosen
     return random_lname_chosen
     return random_country_chosen
@@ -147,19 +147,20 @@ def beginGame():
 
 def letTrough():
     if (random_fname_chosen == first_person_name):
-        print('AYYY')
+        print(f"{red}You've let trough a person with forbidden first name!{white}")
     elif (random_lname_chosen == first_person_surname):
-        print('BBBB')
+        print(f"{red}You've let trough a person with forbidden last name!{white}")
     elif (random_age == first_person_age):
-        print('CCCC')
+        print(f"{red}You've let trough a person with forbidden age!{white}")
     elif (random_country_chosen == first_person_country):
-        print('DDDD')
+        print(f"{red}You've let trough a person with forbidden origin country!{white}")
     elif (first_person_possession == 'Gun' or first_person_possession == 'Knife'):
-        print('EEEE')
+        print(f"{red}You've let trough a person with forbidden possessions!{white}")
 
 
 def borderCheck():
     border_input = input(f'Do you let this person trough the border? ({green}yes{white} or {red}no{white}): \n')
+    newLine()
     if border_input.lower() == 'yes':
         letTrough()
 def introduction():
@@ -171,8 +172,8 @@ def introduction():
     newLine()
     username = input("Type in your name and press return: \n")
     newLine()
-    typingPrint(f'Well officer \033[1;32m{username} \033[1;37;40m, seems like you have got the short end of the stick today. \n')
-    typingPrint('The boss tells us who we can let in the motherland based on his criteria each day. \n')
+    typingPrint(f'Well officer \033[1;32m{username} \033[1;37;40m, seems like you have got the short end of the stick today. There are spies all over here. \n')
+    typingPrint('They tells us who we can let in the motherland based on their information each day. \n')
     
 
 
@@ -193,19 +194,4 @@ def main():
     borderCheck()
     firstPerson()
     borderCheck()
-    firstPerson()
-    borderCheck()
-    firstPerson()
-    borderCheck()
-    firstPerson()
-    borderCheck()
-    firstPerson()
-    borderCheck()
-    firstPerson()
-    borderCheck()
-    firstPerson()
-    borderCheck()
-    firstPerson()
-    borderCheck()
-
 main()
