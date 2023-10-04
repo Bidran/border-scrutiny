@@ -96,8 +96,9 @@ def randomRule():
     newLine()
     typingPrint('Alright, the rule for today is: \n')
     typingPrint("Don't let anyone trough who has any of these: \n")
+    newLine()
     typingPrint(f"First name: {red}{random_fname_chosen}{white} \nLast name: {red}{random_lname_chosen}{white} \nCountry: {red}{random_country_chosen}{white} \nAge: {red}{random_age} years old{white}\n")
-    typingPrint(f'And remember never let in anyone who has a {red}Knife{white} or a {red}Gun{white}.\n')
+    typingPrint(f'And remember, never let in anyone who has a {red}Knife{white} or a {red}Gun{white}.\n')
     return random_fname_chosen
     return random_lname_chosen
     return random_country_chosen
@@ -122,6 +123,7 @@ def firstPerson():
     print(f"|  |{white}Age: {first_person_age}{yellow}|                   |{white}Possession: {first_person_possession}{yellow}|\n"),
     print(f'|______________________________________________________|{white}\n')
 
+money = 0
 
 def beginGame():
     """
@@ -146,16 +148,24 @@ def beginGame():
         beginGame()
 
 def letTrough():
+    global money
     if (random_fname_chosen == first_person_name):
-        print(f"{red}You've let trough a person with forbidden first name!{white}")
+        print(f"{red}You've let trough a person with forbidden first name!\n-$20{white}")
+        money = money - 20
     elif (random_lname_chosen == first_person_surname):
-        print(f"{red}You've let trough a person with forbidden last name!{white}")
+        print(f"{red}You've let trough a person with forbidden last name!\n-$20{white}")
+        money = money - 20
     elif (random_age == first_person_age):
-        print(f"{red}You've let trough a person with forbidden age!{white}")
+        print(f"{red}You've let trough a person with forbidden age!\n-$20{white}")
+        money = money - 20
     elif (random_country_chosen == first_person_country):
-        print(f"{red}You've let trough a person with forbidden origin country!{white}")
+        print(f"{red}You've let trough a person with forbidden origin country!\n-$20{white}")
+        money = money - 20
     elif (first_person_possession == 'Gun' or first_person_possession == 'Knife'):
-        print(f"{red}You've let trough a person with forbidden possessions!{white}")
+        print(f"{red}You've let trough a person with forbidden possessions!\n-$20{white}")
+    else:
+        print(f"{green}Good decision comrade!\n+$10{white}")
+        money = money + 10
 
 
 def borderCheck():
@@ -172,9 +182,10 @@ def introduction():
     newLine()
     username = input("Type in your name and press return: \n")
     newLine()
-    typingPrint(f'Well officer \033[1;32m{username} \033[1;37;40m, seems like you have got the short end of the stick today. There are spies all over here. \n')
-    typingPrint('They tells us who we can let in the motherland based on their information each day. \n')
+    typingPrint(f'Well officer \033[1;32m{username} \033[1;37;40m, seems like you have got the short end of the stick today.\nThere are enemy spies all over the place. \n')
+    typingPrint('The boss tells us who we can let in the motherland based on his information each day. \n')
     
+
 
 
 def main():
@@ -194,4 +205,6 @@ def main():
     borderCheck()
     firstPerson()
     borderCheck()
+    newLine()
+    print(f'{green}You have {money} dollars!{white}')
 main()
