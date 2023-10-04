@@ -98,10 +98,10 @@ def newLine():
 """
 ANSI color values which are used troughout the code.
 """
-red = '\033[1;31;40m'
+red = '\033[0;31;40m'
 white = "\033[0m"
-green = '\033[1;32;40m'
-yellow = '\033[1;33;40m'
+green = '\033[0;32;40m'
+yellow = '\033[0;33;40m'
 
 
 def randomRule():
@@ -283,7 +283,7 @@ def introduction():
     newLine()
     username = input("Type in your name and press return: \n")
     newLine()
-    typingPrint(f"Well officer \033[1;32m{username} \033[1;37;40m, seems like"
+    typingPrint(f"Well officer {green}{username} {white}, seems like"
                 f" you got the short end of the stick today.\nThere are enemy"
                 f" spies all over the place. \n")
     typingPrint('The boss tells us each day who we can let in the motherland\n'
