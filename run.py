@@ -27,11 +27,39 @@ last_name_women = [
     'Ilyina','Yegorova','Titova'
     ]
 
+def newLine():
+    print('\n')
+
+def beginGame():
+    user_input = input('Are you ready to begin? (yes/no): \n')
+    if user_input.lower() == 'yes':
+        print('user typed yes')
+    elif user_input.lower() == 'no':
+        typingPrint("Off to jail with you! \n")
+        user_input_no = input('Did you change your mind? (yes/no): \n')
+        if user_input_no.lower() == 'yes':
+            beginGame()
+        elif user_input_no.lower() == 'no':
+            typingPrint("Bye!")
+        else:
+            print('Type yes or no')
+            beginGame()
+    else:
+        print('Type yes or no')
+        beginGame()
+
+def introduction():
+    newLine()
+    typingPrint("Zdravstvuy comrade, welcome to the border. What's your name? \n")
+    newLine()
+    username = input("Type in your name and press return: \n")
+    newLine()
+    typingPrint(f'Well officer \033[1;32m{username} \033[1;37;40m, seems like you have got the short end of the stick today. \n')
+    typingPrint('The boss tells us who we can let in the motherland based on his criteria each day. \n')
+    beginGame()
+
+
 
 def main():
-    typingPrint("Zdravstvuy comrade, welcome to the border. What's your name? \n")
-    username = input("Type in your name and press return: \n")
-    typingPrint(f'Well officer \033[1;32m {username} \033[1;37;40m, seems like you have got the short end of the stick today. \n')
-    typingPrint('The boss tells us who we can let in the motherland based on his criteria each day. \n')
-    typingPrint('Are you ready to begin? \n')
+    introduction()
 main()
