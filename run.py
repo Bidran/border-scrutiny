@@ -74,6 +74,7 @@ def newLine():
 red = '\033[1;31;40m'
 white = '\033[1;37;40m'
 green = '\033[1;32;40m'
+yellow = '\033[1;33;40m'
 
 def randomRule():
     global random_fname_chosen
@@ -103,6 +104,11 @@ def randomRule():
     return random_age
 
 def firstPerson():
+    global first_person_name
+    global first_person_surname
+    global first_person_age
+    global first_person_country
+    global first_person_possession
     first_person = makePerson()
     first_person_name = first_person[0]
     first_person_surname = first_person[1]
@@ -110,11 +116,11 @@ def firstPerson():
     first_person_country = first_person[3]
     first_person_possession = first_person[4]
     newLine()
-    print(' _______________________________________________________\n')
-    print(f"|  |Name: {first_person_name} {first_person_surname}|     |Country: {first_person_country}|\n")
+    print(f'{yellow} _______________________________________________________\n')
+    print(f"|  |{white}Name: {first_person_name} {first_person_surname}{yellow}|     |{white}Country: {first_person_country}{yellow}|\n")
     print('|------------------------------------------------------|\n')
-    print(f"|  |Age: {first_person_age}|                |Possession: {first_person_possession}|\n"),
-    print('|______________________________________________________|\n')
+    print(f"|  |{white}Age: {first_person_age}{yellow}|                   |{white}Possession: {first_person_possession}{yellow}|\n"),
+    print(f'|______________________________________________________|{white}\n')
 
 
 def beginGame():
@@ -139,8 +145,14 @@ def beginGame():
         print('Type yes or no')
         beginGame()
 
+def letTrough():
+    if (random_fname_chosen == first_person_name):
+        print('AYYY')
 
-
+def borderCheck():
+    border_input = input(f'Do you let this person trough the border? ({green}yes{white} or {red}no{white}): \n')
+    if border_input.lower() == 'yes':
+        letTrough()
 def introduction():
     """
     Short introduction which takes the players name with a short description
@@ -163,7 +175,16 @@ def main():
     beginGame()
     newLine()
     firstPerson()
-    firstPerson() 
+    borderCheck()
     firstPerson()
+    borderCheck() 
+    firstPerson()
+    borderCheck()
+    firstPerson()
+    borderCheck()
+    firstPerson()
+    borderCheck()
+    firstPerson()
+    borderCheck()
 
 main()
