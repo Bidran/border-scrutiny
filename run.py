@@ -69,6 +69,11 @@ def newLine():
     """
     print('\n')
 
+red = '\033[1;31;40m'
+
+white = '\033[1;37;40m'
+green = '\033[1;32;40m'
+
 def randomRule():
     random_fname_man = random.choice(first_name_men)
     random_fname_woman = random.choice(first_name_women)
@@ -78,27 +83,27 @@ def randomRule():
     both_last = [random_lname_man, random_lname_woman]
     random_fname_chosen = random.choice(both_first)
     random_lname_chosen = random.choice(both_last)
+    random_country_chosen = random.choice(origin_country)
     random_age = random.choice(range(10,100))
     typingPrint('Alright, the rule for today is: \n')
     typingPrint("Don't let anyone who has any of these: \n")
-    typingPrint(f"First name: {random_fname_chosen} \nLast name: {random_lname_chosen} \nAnd is under: {random_age} years old")
+    typingPrint(f"First name: {red}{random_fname_chosen}{white} \nLast name: {red}{random_lname_chosen}{white} \nCountry: {red}{random_country_chosen}{white} \nAge: {red}{random_age} years old{white}\n")
+    typingPrint(f'And remember never let in anyone who has a {red}Knife{white} or a {red}Gun{white}\n')
 
-randomRule()
 
-def rulesToday():
-    typingPrint('Alright, the rule for today is this: \n')
-    typingPrint(f'Don')
+
+
 
 def beginGame():
     """
     Takes players input if he wishes to proceed with the game.
     """
-    user_input = input('Are you ready to begin? (yes/no): \n')
+    user_input = input(f'Are you ready to begin? ({green}yes{white}/{red}no{white}): \n')
     if user_input.lower() == 'yes':
         print('user typed yes')
     elif user_input.lower() == 'no':
         typingPrint("Off to jail with you! \n")
-        user_input_no = input('Did you change your mind? (yes/no): \n')
+        user_input_no = input(f'Did you change your mind? ({green}yes{white}/{red}no{white}): \n')
         if user_input_no.lower() == 'yes':
             beginGame()
         elif user_input_no.lower() == 'no':
@@ -109,6 +114,8 @@ def beginGame():
     else:
         print('Type yes or no')
         beginGame()
+
+beginGame()
 
 def introduction():
     """
