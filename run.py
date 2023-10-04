@@ -61,7 +61,7 @@ def makeWoman():
     random_possesion = random.sample(possesion, 3)
     return [random_fname,random_lname,age,random_country,random_possesion]
     
-makePerson()
+
 
 def newLine():
     """
@@ -92,7 +92,7 @@ def randomRule():
     typingPrint(f"First name: {red}{random_fname_chosen}{white} \nLast name: {red}{random_lname_chosen}{white} \nCountry: {red}{random_country_chosen}{white} \nAge: {red}{random_age} years old{white}\n")
     typingPrint(f'And remember never let in anyone who has a {red}Knife{white} or a {red}Gun{white}\n')
 
-randomRule()
+
 
 
 
@@ -131,10 +131,14 @@ def introduction():
     newLine()
     typingPrint(f'Well officer \033[1;32m{username} \033[1;37;40m, seems like you have got the short end of the stick today. \n')
     typingPrint('The boss tells us who we can let in the motherland based on his criteria each day. \n')
-    beginGame()
+    
 
 
 def main():
+    """
+    Main function which calls others when required
+    """
     introduction()
+    beginGame()
 
-# main()
+main()
