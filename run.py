@@ -33,7 +33,7 @@ origin_country = [
     'Bolskaya','Sputnikstan','Molotovia'
     ] 
 
-possesion = [
+possession = [
     'Knife','Gun','Lighter','Cigarettes','Phone',
     'Chocolate','Crisps','Juice','Painting','Headphones','Laptop',
     'USB Stick', 'Broom', 'Rollerblades','Fidget Spinner','Lightbulb'
@@ -46,20 +46,22 @@ def makePerson():
     
 
 def makeMan():
+    global random_fname,random_lname,age,random_country,random_possession
     random_fname = random.choice(first_name_men)
     random_lname = random.choice(last_name_men)
     age = random.choice(range(10,100))
     random_country = random.choice(origin_country)
-    random_possesion = random.sample(possesion, 3)
-    return random_fname,random_lname,age,random_country,random_possesion
+    random_possession = random.choice(possession)
+    return random_fname,random_lname,age,random_country,random_possession
     
 def makeWoman():
+    global random_fname,random_lname,age,random_country,random_possession
     random_fname = random.choice(first_name_women)
     random_lname = random.choice(last_name_women)
     age = random.choice(range(10,100))
     random_country = random.choice(origin_country)
-    random_possesion = random.sample(possesion, 3)
-    return random_fname,random_lname,age,random_country,random_possesion
+    random_possession = random.choice(possession)
+    return random_fname,random_lname,age,random_country,random_possession
     
 
 
@@ -100,10 +102,19 @@ def randomRule():
     return random_country_chosen
     return random_age
 
-
-
-
-
+def firstPerson():
+    first_person = makePerson()
+    first_person_name = first_person[0]
+    first_person_surname = first_person[1]
+    first_person_age = first_person[2]
+    first_person_country = first_person[3]
+    first_person_possession = first_person[4]
+    newLine()
+    print(' _______________________________________________________\n')
+    print(f"|  |Name: {first_person_name} {first_person_surname}|     |Country: {first_person_country}|\n")
+    print('|------------------------------------------------------|\n')
+    print(f"|  |Age: {first_person_age}|                |Possession: {first_person_possession}|\n"),
+    print('|______________________________________________________|\n')
 
 
 def beginGame():
@@ -150,7 +161,9 @@ def main():
     """
     introduction()
     beginGame()
-    print(random_age)
-
+    newLine()
+    firstPerson()
+    firstPerson() 
+    firstPerson()
 
 main()
