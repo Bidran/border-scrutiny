@@ -168,11 +168,35 @@ def letTrough():
         money = money + 10
 
 
+def dontLetTrough():
+    global money
+    if (random_fname_chosen == first_person_name):
+        print(f"{green}You've stopped a person with forbidden first name!\n+$30{white}")
+        money = money + 30
+    elif (random_lname_chosen == first_person_surname):
+        print(f"{green}You've stopped a person with forbidden last name!\n+$30{white}")
+        money = money + 30
+    elif (random_age == first_person_age):
+        print(f"{green}You've stopped a person with forbidden age!\n+$30{white}")
+        money = money + 30
+    elif (random_country_chosen == first_person_country):
+        print(f"{green}You've stopped a person with forbidden origin country!\n+$30{white}")
+        money = money + 30
+    elif (first_person_possession == 'Gun' or first_person_possession == 'Knife'):
+        print(f"{green}You've stopped a person with forbidden possessions!\n+$30{white}")
+    else:
+        print(f"{red}Could've let them trough!\n-$10{white}")
+        money = money - 10
+
+
 def borderCheck():
     border_input = input(f'Do you let this person trough the border? ({green}yes{white} or {red}no{white}): \n')
     newLine()
     if border_input.lower() == 'yes':
         letTrough()
+    elif border_input.lower() == 'no':
+        dontLetTrough()
+    
 def introduction():
     """
     Short introduction which takes the players name with a short description
@@ -184,9 +208,16 @@ def introduction():
     newLine()
     typingPrint(f'Well officer \033[1;32m{username} \033[1;37;40m, seems like you have got the short end of the stick today.\nThere are enemy spies all over the place. \n')
     typingPrint('The boss tells us who we can let in the motherland based on his information each day. \n')
+    typingPrint('You will either gain money or lose it depending on how well you do.\n')
     
 
 
+
+def finalScore():
+    if money > 1:
+        print(f'{green}You have ${money}!{white}')
+    else:
+        print(f'{red}You have {money} dollars!{white}')
 
 def main():
     """
@@ -206,5 +237,5 @@ def main():
     firstPerson()
     borderCheck()
     newLine()
-    print(f'{green}You have {money} dollars!{white}')
+    finalScore()
 main()
