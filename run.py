@@ -5,7 +5,7 @@ def typingPrint(text):
   for character in text:
     sys.stdout.write(character)
     sys.stdout.flush()
-    time.sleep(0.02)
+    time.sleep(0.03)
 
 
 first_name_men = [
@@ -79,7 +79,9 @@ def randomRule():
     random_fname_chosen = random.choice(both_first)
     random_lname_chosen = random.choice(both_last)
     random_age = random.choice(range(10,100))
-    print(random_fname_chosen, random_lname_chosen, random_age)
+    typingPrint('Alright, the rule for today is: \n')
+    typingPrint("Don't let anyone who has any of these: \n")
+    typingPrint(f"First name: {random_fname_chosen} \nLast name: {random_lname_chosen} \nAnd is under: {random_age} years old")
 
 randomRule()
 
