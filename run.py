@@ -31,6 +31,9 @@ def newLine():
     print('\n')
 
 def beginGame():
+    """
+    Takes players input if he wishes to proceed with the game.
+    """
     user_input = input('Are you ready to begin? (yes/no): \n')
     if user_input.lower() == 'yes':
         print('user typed yes')
@@ -49,6 +52,9 @@ def beginGame():
         beginGame()
 
 def introduction():
+    """
+    Short introduction which takes the players name with a short description
+    """
     newLine()
     typingPrint("Zdravstvuy comrade, welcome to the border. What's your name? \n")
     newLine()
@@ -57,7 +63,6 @@ def introduction():
     typingPrint(f'Well officer \033[1;32m{username} \033[1;37;40m, seems like you have got the short end of the stick today. \n')
     typingPrint('The boss tells us who we can let in the motherland based on his criteria each day. \n')
     beginGame()
-
 
 
 def main():
