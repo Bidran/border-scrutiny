@@ -33,6 +33,12 @@ origin_country = [
     'Bolskaya','Sputnikstan','Molotovia'
     ] 
 
+possesion = [
+    'Knife','Gun','Lighter','Cigarettes','Phone',
+    'Chocolate','Crisps','Juice','Painting','Headphones','Laptop',
+    'USB Stick', 'Broom', 'Rollerblades','Fidget Spinner','Lightbulb'
+    ]
+
 def makePerson():
     persons = [makeMan(), makeWoman()]
     chosen = random.choice(persons)
@@ -44,14 +50,16 @@ def makeMan():
     random_lname = random.choice(last_name_men)
     age = random.choice(range(10,100))
     random_country = random.choice(origin_country)
-    return [random_fname,random_lname,age,random_country]
+    random_possesion = random.sample(possesion, 3)
+    return [random_fname,random_lname,age,random_country,random_possesion]
     
 def makeWoman():
     random_fname = random.choice(first_name_women)
     random_lname = random.choice(last_name_women)
     age = random.choice(range(10,100))
     random_country = random.choice(origin_country)
-    return [random_fname,random_lname,age,random_country]
+    random_possesion = random.sample(possesion, 3)
+    return [random_fname,random_lname,age,random_country,random_possesion]
     
 makePerson()
 
