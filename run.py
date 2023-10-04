@@ -28,6 +28,7 @@ last_name_women = [
     'Ilyina','Yegorova','Titova'
     ]
 
+
 def makePerson():
     persons = [makeMan(), makeWoman()]
     chosen = random.choice(persons)
@@ -37,12 +38,14 @@ def makePerson():
 def makeMan():
     random_fname = random.choice(first_name_men)
     random_lname = random.choice(last_name_men)
-    return [random_fname,random_lname]
+    age = random.choice(range(10,100))
+    return [random_fname,random_lname,age]
     
 def makeWoman():
     random_fname = random.choice(first_name_women)
     random_lname = random.choice(last_name_women)
-    return [random_fname,random_lname]
+    age = random.choice(range(10,100))
+    return [random_fname,random_lname,age]
     
 makePerson()
 
