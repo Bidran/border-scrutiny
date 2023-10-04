@@ -99,7 +99,7 @@ def newLine():
 ANSI color values which are used troughout the code.
 """
 red = '\033[1;31;40m'
-white = '\033[1;37;40m'
+white = "\033[0m"
 green = '\033[1;32;40m'
 yellow = '\033[1;33;40m'
 
