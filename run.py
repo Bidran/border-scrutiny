@@ -278,12 +278,7 @@ def introduction():
     """
     Short introduction which takes the players name with a short description.
     """
-    print(f'{yellow}')
-    Art = text2art("Border Scrutiny")
-    print(Art)
-    newLine()
-    print('')
-    typingPrint(f"{white}Zdravstvuy {red}COMRADE{white}, welcome to the border"
+    typingPrint(f"Zdravstvuy {red}COMRADE{white}, welcome to the border"
                 f". What's your name? \n")
     newLine()
     username = input("Type in your name and press return: \n")
@@ -291,7 +286,7 @@ def introduction():
     typingPrint(f"Well officer \033[1;32m{username} \033[1;37;40m, seems like"
                 f" you got the short end of the stick today.\nThere are enemy"
                 f" spies all over the place. \n")
-    typingPrint('The boss tells us each day who we can let in the motherland'
+    typingPrint('The boss tells us each day who we can let in the motherland\n'
                 ' based on new information. \n')
     typingPrint('You will either earn money or lose it depending'
                 ' on how well you do.\n')
