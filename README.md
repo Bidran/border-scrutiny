@@ -200,6 +200,51 @@ No bugs were found by when testing the final version of the website.
 
 <hr>
 
+* The testing process aimed to verify if  forbidden values returned randomly each time.
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+| Potential Spy | When called upon, adds random values as first and last name, country and age | Called function | Values assigned randomly from a list | Pass|
+| Potential Spy 2 | When called upon, adds random values as first and last name, country and age | Called function | Values assigned randomly from a list | Pass|
+| Potential Spy 3 | When called upon, adds random values as first and last name, country and age | Called function | Values assigned randomly from a list | Pass|
+
+<hr>
+
+* The testing process aimed to verify if comparison between forbidden possessions and generated persons worked.
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+| Possession Gun | When letting through, game should take money from player and print a message  | Typed yes | Game took money from player and printed a message | Pass|
+| Possession Knife | When letting through, game should take money from player and print a message  | Typed yes | Game took money from player and printed a message | Pass|
+| Possession Gun | When turning away, game should take money from player and print a message  | Typed no | Game gave money to the player and printed a message | Pass|
+| Possession Knife | When turning away, game should take money from player and print a message  | Typed no | Game gave money to the player and printed a message | Pass|
+
+<hr>
+
+* The testing process aimed to verify if comparison between other forbidden values and generated persons worked and what happens when they do.
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+| If first name, last name, age or country match | When letting through, game should take money from player and print a message  | Typed yes | Game took money from player and printed a message | Pass|
+| If first name, last name, age or country match | When turning away, game should give money to player and print a message  | Typed no | Game gave money to player and printed a message | Pass|
+
+
+<hr>
+
+* The testing process aimed to verify if comparison between other forbidden values and generated persons worked and what happens when they don't.
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+| If neither first name, last name, age or country match | When letting through, game should give money to player and print a message  | Typed yes | Game gave money to player and printed a message | Pass|
+| If neither first name, last name, age or country match | When turning away, game should take money from player and print a message  | Typed no | Game took money from player and printed a message | Pass|
+
+
+<hr>
+
 ## Deployment & Local Development
 
 ### Deployment
@@ -244,7 +289,7 @@ To clone the border-scrutiny repository:
 
 ### Missed Opportunity
 
-* Had I had more time I would have liked to implement features such as :
+* If I had more time I would have liked to implement features such as :
     - A highscore sheet which saves to google drive and updates the highscores.
     - Clean up code by using more classes.
     - Used more ANSII code to style.
@@ -256,9 +301,9 @@ To clone the border-scrutiny repository:
 
 ### Code Used
 
-*[Text Effect Typing](https://www.101computing.net/python-typing-text-effect/)
-*[Text Colors](https://www.studytonight.com/python-howtos/how-to-print-colored-text-in-python)
-*[ASCII Art](https://pypi.org/project/art/)
+* [Text Effect Typing](https://www.101computing.net/python-typing-text-effect/)
+* [Text Colors](https://www.studytonight.com/python-howtos/how-to-print-colored-text-in-python)
+* [ASCII Art](https://pypi.org/project/art/)
 
 
 ### Media
