@@ -211,7 +211,7 @@ No bugs were found by when testing the final version of the website.
 
 <hr>
 
-* The testing process aimed to verify if comparison between forbidden possessions and generated persons worked.
+* The testing process aimed to verify if comparison between forbidden possessions and generated persons worked and what happens if they match/don't match.
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
@@ -220,30 +220,53 @@ No bugs were found by when testing the final version of the website.
 | Possession Knife | When letting through, game should take money from player and print a message  | Typed yes | Game took money from player and printed a message | Pass|
 | Possession Gun | When turning away, game should take money from player and print a message  | Typed no | Game gave money to the player and printed a message | Pass|
 | Possession Knife | When turning away, game should take money from player and print a message  | Typed no | Game gave money to the player and printed a message | Pass|
+| Choice Wrong Input | When entered the question repeats | Typed hre | Game reset back to y/n question | Pass|
 
 <hr>
 
-* The testing process aimed to verify if comparison between other forbidden values and generated persons worked and what happens when they do.
+* The testing process aimed to verify if comparison between other forbidden values and generated persons worked and what happens when they do match.
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 | If first name, last name, age or country match | When letting through, game should take money from player and print a message  | Typed yes | Game took money from player and printed a message | Pass|
 | If first name, last name, age or country match | When turning away, game should give money to player and print a message  | Typed no | Game gave money to player and printed a message | Pass|
+| Choice Wrong Input | When entered the question repeats | Typed ghreh | Game reset back to y/n question | Pass|
 
 
 <hr>
 
-* The testing process aimed to verify if comparison between other forbidden values and generated persons worked and what happens when they don't.
+* The testing process aimed to verify if comparison between other forbidden values and generated persons worked and what happens when they don't match.
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 | If neither first name, last name, age or country match | When letting through, game should give money to player and print a message  | Typed yes | Game gave money to player and printed a message | Pass|
 | If neither first name, last name, age or country match | When turning away, game should take money from player and print a message  | Typed no | Game took money from player and printed a message | Pass|
+| Choice Wrong Input | When entered the question repeats | Typed retert | Game reset back to y/n question | Pass|
 
 
 <hr>
+
+* The testing process aimed to verify if result worked.
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+| If after 5 checks game finishes | When 5 people finish, score pops up with option to play with new random values, keeping the money | Played the game | Game finished, printed and saved money amount | Pass|
+| Choice No | When entered you don't proceed with the game | Typed no | Game gave choice to quit completely | Pass|
+| Choice Wrong Input | When entered the question repeats | Typed agr | Game reset back to y/n question | Pass|
+
+<hr>
+
+* The testing process aimed to verify if continuing to another day worked.
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+| Choice Yes | When entered you proceed with the game | Typed yes | Begins game again  | Pass|
+| Choice No | When entered you don't proceed with the game | Typed no | Game finishes, printing 'Game Over" in ASCII Art | Pass|
+| Choice Wrong Input | When entered the question repeats | Typed agr | Game reset back to y/n question | Pass|
 
 ## Deployment & Local Development
 
