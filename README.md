@@ -24,6 +24,13 @@ View the live site: [Border Scrutiny](https://border-scrutiny-32912c92d278.herok
   * [Solved Bugs](#solved-bugs)
   * [Known Bugs](#known-bugs)
   * [Functional testing](#functional-testing)
+  
+
+  * [Deployment & Local Development](#deployment--local-development)
+  * [Deployment](#deployment)
+  * [Local Development](#local-development)
+    * [How to Fork](#how-to-fork)
+    * [How to Clone](#how-to-clone)
   * [Missed Opportunity](#missed-opportunity)
 
 * [Credits](#credits)
@@ -331,6 +338,6 @@ To clone the border-scrutiny repository:
 
 ### Media
 A stock image from [Pexels](https://www.pexels.com/) was used for this project.
-[Rusty fence](https://www.pexels.com/photo/old-metal-blue-lattice-with-rusty-details-on-fence-6156548/)
+[Rusty fence by Laker](https://www.pexels.com/photo/old-metal-blue-lattice-with-rusty-details-on-fence-6156548/)
 
 
