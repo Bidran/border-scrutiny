@@ -294,6 +294,12 @@ def introduction():
     """
     Short introduction which takes the players name with a short description.
     """
+    newLine()
+    Art = text2art("Border Scrutiny",font='small',chr_ignore=True)
+    print(f'{yellow}')
+    print(Art)
+    print(f'{white}')
+    newLine()
     typingPrint(f"Zdravstvuy {red}COMRADE{white}, welcome to the border"
                 f". What's your name? \n")
     newLine()
