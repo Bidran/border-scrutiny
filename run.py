@@ -185,6 +185,7 @@ def beginGame():
             beginGame()
         elif user_input_no.lower() == 'no':
             typingPrint("Bye!")
+            newLine()
             exit()
         else:
             print('Type yes or no')
