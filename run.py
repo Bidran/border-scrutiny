@@ -230,8 +230,8 @@ def letThrough():
               f"\n-$20{white}")
         money = money - 20
     elif (random_country_chosen == first_person_country):
-        print(f"{red}You've let through a person with forbidden origin country!"
-              f"\n-$20{white}")
+        print(f"{red}You've let through a person with forbidden origin"
+              f" country!\n-$20{white}")
         money = money - 20
     elif (first_person_possession == 'Gun'
           or first_person_possession == 'Knife'):
@@ -295,7 +295,7 @@ def introduction():
     Short introduction which takes the players name with a short description.
     """
     newLine()
-    Art = text2art("Border Scrutiny",font='small',chr_ignore=True)
+    Art = text2art("Border Scrutiny", font='small', chr_ignore=True)
     print(f'{yellow}')
     print(Art)
     print(f'{white}')
