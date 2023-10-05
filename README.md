@@ -32,6 +32,8 @@ View the live site: [Border Scrutiny](https://border-scrutiny-32912c92d278.herok
 
 ## Design
 
+
+
 ### Colours
 
 Colours used were done using ANSI code for which instructions can be found in the following link: [Colors](https://www.studytonight.com/python-howtos/how-to-print-colored-text-in-python)
@@ -166,7 +168,7 @@ We will go trough the features of the game now.
 1. Python linter showing newline error.
       
      
-      <img src="./docs/bugs/newline_bug.PNG>
+      <img src="./docs/bugs/newline_bug.PNG">
  
       This issue was solved by adding an empty line after calling the main function.
 
