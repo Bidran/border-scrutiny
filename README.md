@@ -16,6 +16,9 @@ View the live site: [Border Scrutiny](https://border-scrutiny-32912c92d278.herok
 
 * [Features](#features)
 
+* [Technologies Used](#technologies-used)
+  * [Languages Used](#languages-used)
+
 * [Testing](#testing)
   * [CI Python Linter](#linter)
   * [Solved Bugs](#solved-bugs)
@@ -23,6 +26,9 @@ View the live site: [Border Scrutiny](https://border-scrutiny-32912c92d278.herok
   * [Functional testing](#functional-testing)
   * [Missed Opportunity](#missed-opportunity)
 
+* [Credits](#credits)
+  * [Code Used](#Code-Used)
+  * [Media](#media)
 ## Design
 
 ### Colours
@@ -210,3 +216,29 @@ To clone the border-scrutiny repository:
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
+
+### Missed Opportunity
+
+* Had I had more time I would have liked to implement features such as :
+    - A highscore sheet which saves to google drive and updates the highscores.
+    - Clean up code by using more classes.
+    - Used more ANSII code to style.
+
+
+---------
+
+## Credits
+
+### Code Used
+
+*[Text Effect Typing](https://www.101computing.net/python-typing-text-effect/)
+*[Text Colors](https://www.studytonight.com/python-howtos/how-to-print-colored-text-in-python)
+*[ASCII Art](https://pypi.org/project/art/)
+
+
+### Media
+A stock image from [Pexels](https://www.pexels.com/) was used for this project.
+[Rusty fence](https://www.pexels.com/photo/old-metal-blue-lattice-with-rusty-details-on-fence-6156548/)
+
+
