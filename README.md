@@ -179,6 +179,27 @@ No bugs were found by when testing the final version of the website.
 
 ### Functional Testing
 
+* The testing process aimed to verify if entering a name saves a value and repeats it back to you in a message.
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+| Name | When entered prints name back out in the next message | Entered name | Name printed back | Pass|
+
+
+<hr>
+
+* The testing process aimed to verify yes/no inputs worked correctly.
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+| Choice Yes | When entered you proceed with the game | Typed yes | Game procedeed | Pass|
+| Choice No | When entered you don't proceed with the game | Typed no | Game gave choice to quit completely | Pass|
+| Choice Wrong Input | When entered the question repeats | Typed agr | Game reset back to y/n question | Pass|
+
+<hr>
+
 ## Deployment & Local Development
 
 ### Deployment
