@@ -287,7 +287,7 @@ def introduction():
                 f" you got the short end of the stick today.\nThere are enemy"
                 f" spies all over the place. \n")
     typingPrint('The boss tells us each day who we can let in the motherland\n'
-                ' based on new information. \n')
+                'based on new information. \n')
     typingPrint('You will either earn money or lose it depending'
                 ' on how well you do.\n')
 
