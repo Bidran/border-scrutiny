@@ -107,7 +107,7 @@ def newLine():
 
 
 """
-ANSI color values which are used troughout the code.
+ANSI color values which are used throughout the code.
 """
 red = '\033[0;31m'
 white = "\033[0m"
@@ -138,7 +138,7 @@ def randomRule():
     random_age = random.choice(range(20, 29))
     newLine()
     typingPrint('Alright, the rule for today is: \n')
-    typingPrint("Don't let anyone trough who has any of these: \n")
+    typingPrint("Don't let anyone through who has any of these: \n")
     newLine()
     typingPrint(f"First name: {red}{random_fname_chosen}{white} \n"
                 f"Last name: {red}{random_lname_chosen}{white} \n"
@@ -210,7 +210,7 @@ def beginGame():
         beginGame()
 
 
-def letTrough():
+def letThrough():
     """
     Function which compares values between original random person and each
     consecutive one after which it gives {money} value accordingly.
@@ -218,31 +218,31 @@ def letTrough():
     """
     global money
     if (random_fname_chosen == first_person_name):
-        print(f"{red}You've let trough a person with forbidden first name!"
+        print(f"{red}You've let through a person with forbidden first name!"
               f"\n-$20{white}")
         money = money - 20
     elif (random_lname_chosen == first_person_surname):
-        print(f"{red}You've let trough a person with forbidden last name!"
+        print(f"{red}You've let through a person with forbidden last name!"
               f"\n-$20{white}")
         money = money - 20
     elif (random_age == first_person_age):
-        print(f"{red}You've let trough a person with forbidden age!"
+        print(f"{red}You've let through a person with forbidden age!"
               f"\n-$20{white}")
         money = money - 20
     elif (random_country_chosen == first_person_country):
-        print(f"{red}You've let trough a person with forbidden origin country!"
+        print(f"{red}You've let through a person with forbidden origin country!"
               f"\n-$20{white}")
         money = money - 20
     elif (first_person_possession == 'Gun'
           or first_person_possession == 'Knife'):
-        print(f"{red}You've let trough a person with forbidden possessions!"
+        print(f"{red}You've let through a person with forbidden possessions!"
               f"\n-$20{white}")
     else:
         print(f"{green}Good decision comrade!\n+$10{white}")
         money = money + 10
 
 
-def dontLetTrough():
+def dontLetThrough():
     """
     Function which compares values between original random person and each
     consecutive one after which it gives {money} value accordingly.
@@ -270,7 +270,7 @@ def dontLetTrough():
         print(f"{green}You've stopped a person with forbidden possessions!"
               f"\n+$30{white}")
     else:
-        print(f"{red}Could've let them trough!\n-$10{white}")
+        print(f"{red}Could've let them through!\n-$10{white}")
         money = money - 10
 
 
@@ -278,13 +278,13 @@ def borderCheck():
     """
     Input function which takes values yes and no, calling previous functions.
     """
-    border_input = input(f'Do you let this person trough the border?'
+    border_input = input(f'Do you let this person through the border?'
                          f'({green}yes{white} or {red}no{white}): \n')
     newLine()
     if border_input.lower() == 'yes':
-        letTrough()
+        letThrough()
     elif border_input.lower() == 'no':
-        dontLetTrough()
+        dontLetThrough()
     else:
         print('Type yes or no')
         borderCheck()
