@@ -26,7 +26,7 @@ Colours used were done using ANSI code for which instructions can be found in th
 
 To add some flare, ASCII Art was imported and used for introduction and end screen. [ASCII Art](https://pypi.org/project/art/)
 
-<img src="./docs/features/home_screen.PNG" alt ="home screen" width="60%">
+<img src="./docs/features/home_screen.PNG" alt ="home screen">
 
 ### Typography
 
@@ -70,7 +70,7 @@ We will go trough the features of the game now.
  * Start End Section.
 
     * Start or end game.
-    * Makes sure you either type yes or no to the question, if the answer is twice no, the game closes.
+    * Makes sure you either type yes or no to the question, if the answer is no twice, the game closes.
 
         <img src="./docs/features/start_end.PNG">  
     
@@ -93,14 +93,14 @@ We will go trough the features of the game now.
     * Deicide which person fits the criteria and deicide their fate.
     * Depending on the values, the program prints if you got it right or not and either adds or removes money from saved data.
 
-    * Basic Good Decision
-        <img src="./docs/features/good_decision.PNG">
-    * Basic Bad Decision
-        <img src="./docs/features/bad_decision.PNG">
-    * Caught a potential spy
-        <img src="./docs/features/good_forbidden.PNG">
-    * Missed a potential spy
-        <img src="./docs/features/bad_forbidden.PNG">   
+        * Basic Good Decision
+            <img src="./docs/features/good_decision.PNG">
+        * Basic Bad Decision
+            <img src="./docs/features/bad_decision.PNG">
+        * Caught a potential spy
+            <img src="./docs/features/good_forbidden.PNG">
+        * Missed a potential spy
+            <img src="./docs/features/bad_forbidden.PNG">   
 
   * End section.
 
@@ -114,4 +114,4 @@ We will go trough the features of the game now.
     * Game Over section.
     * Prints out Game Over in ASCII.
 
-        <img src="./docs/features/random_person.PNG">
+        <img src="./docs/features/game_over.PNG">
