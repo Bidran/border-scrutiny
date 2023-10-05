@@ -1,6 +1,6 @@
 # Border Scrutiny
 
-"Border Scrutiny" is a game in which you play as a border guard, checking and making sure to accept or refuse people based on sensitive intel.
+"Border Scrutiny" is a game in which you assume the role of a vigilant border guard. Your mission: to meticulously assess and decide the fate of individuals based on sensitive intelligence, determining whether to grant or deny them entry.
 
 View the live site: [Border Scrutiny](https://border-scrutiny-32912c92d278.herokuapp.com)
 
