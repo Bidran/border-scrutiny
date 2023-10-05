@@ -71,28 +71,32 @@ def makeMan():
     """
     Pulls random values from lists which will create a profile of a man.
     """
-    global random_fname, random_lname, age, random_country, random_possession, random_face
+    global random_fname, random_lname, age, random_country
+    global random_possession, random_face
     random_fname = random.choice(first_name_men)
     random_lname = random.choice(last_name_men)
     age = random.choice(range(20, 29))
     random_country = random.choice(origin_country)
     random_possession = random.choice(possession)
     random_face = random.choice(faces)
-    return random_fname, random_lname, age, random_country, random_possession, random_face
+    return (random_fname, random_lname, age, random_country,
+            random_possession, random_face)
 
 
 def makeWoman():
     """
     Pulls random values from lists which will create a profile of a woman.
     """
-    global random_fname, random_lname, age, random_country, random_possession, random_face
+    global random_fname, random_lname, age, random_country
+    global random_possession, random_face
     random_fname = random.choice(first_name_women)
     random_lname = random.choice(last_name_women)
     age = random.choice(range(20, 29))
     random_country = random.choice(origin_country)
     random_possession = random.choice(possession)
     random_face = random.choice(faces)
-    return random_fname, random_lname, age, random_country, random_possession, random_face
+    return (random_fname, random_lname, age, random_country,
+            random_possession, random_face)
 
 
 def newLine():
@@ -178,13 +182,6 @@ def firstPerson():
 # Money value, used as score
 money = 0
 
-def randomFace():
-    """
-    Creates a random face out of list
-    """
-    random_face = random.choice(faces)
-    
-    
 
 def beginGame():
     """
