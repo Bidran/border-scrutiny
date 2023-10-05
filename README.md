@@ -29,6 +29,7 @@ View the live site: [Border Scrutiny](https://border-scrutiny-32912c92d278.herok
 * [Credits](#credits)
   * [Code Used](#Code-Used)
   * [Media](#media)
+
 ## Design
 
 ### Colours
@@ -39,7 +40,7 @@ Colours used were done using ANSI code for which instructions can be found in th
 
 To add some flare, ASCII Art was imported and used for introduction and end screen. [ASCII Art](https://pypi.org/project/art/)
 
-<img src="./docs/features/home_screen.PNG" alt ="home screen">
+<img src="./docs/features/intro_screen.PNG" alt ="home screen">
 
 ### Typography
 
