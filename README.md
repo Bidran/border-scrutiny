@@ -1,32 +1,117 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Border Scrutiny
 
-Welcome,
+"Border Scrutiny" is a game in which you play as a border guard, checking and making sure to accept or refuse people based on sensitive intel.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+View the live site: [Border Scrutiny](https://border-scrutiny-32912c92d278.herokuapp.com)
 
-## Reminders
+![Home screen image of Border Scrutiny](./docs/features/home_screen.PNG)
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## CONTENTS
 
-## Creating the Heroku app
+* [Design](#design)
+  * [Colours](#Colours)
+  * [Art](#Art)
+  * [Typography](#Typography)
+  * [Flowchart](#Flowchart)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+* [Features](#features)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Design
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Colours
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+Colours used were done using ANSI code for which instructions can be found in the following link: [Colors](https://www.studytonight.com/python-howtos/how-to-print-colored-text-in-python)
 
-Connect your GitHub repository and deploy as normal.
+### Art
 
-## Constraints
+To add some flare, ASCII Art was imported and used for introduction and end screen. [ASCII Art](https://pypi.org/project/art/)
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+<img src="./docs/features/home_screen.PNG" alt ="home screen" width="60%">
 
----
+### Typography
 
-Happy coding!
+Font family Russo One was used for heading, offering a more rugged look.
+
+
+### Flowchart
+
+The flowchart follows the logic of the game, how each process interacts with data.
+
+The flowchart helps with manually testing game functionality.
+
+<img src="./docs/flowchart/flowchart.png" alt ="flowchart">
+
+
+## Features
+
+We will go trough the features of the game now.
+
+ * Intro Section.
+
+    * An introduction of 'Border Scrutiny'.
+    * Gives title of the game and starts the game.
+
+        <img src="./docs/features/home_screen.PNG">
+
+ * Name Section.
+
+    * Continuation of the intro.
+    * Gives you the input for player name, repeats it and sets up the story.
+
+        <img src="./docs/features/name.PNG">
+
+ * Start Section.
+
+    * Start the game.
+    * Gives you the yes or no choice to continue the game.
+
+        <img src="./docs/features/start.PNG">   
+     
+ * Start End Section.
+
+    * Start or end game.
+    * Makes sure you either type yes or no to the question, if the answer is twice no, the game closes.
+
+        <img src="./docs/features/start_end.PNG">  
+    
+ * Random Person Today Section.
+
+    * Rules which have to be followed.
+    * Gives you the list of randomized values on which you must keep an eye on in the next section. You must avoid letting anyone in with any of these values.
+
+        <img src="./docs/features/random_today.PNG"> 
+
+ * Documents section.
+
+    * A person who has to be compared with forbidden values.
+    * Pulls the random values from lists, creates a person.
+
+        <img src="./docs/features/random_person.PNG">
+
+ * Decision section.
+
+    * Deicide which person fits the criteria and deicide their fate.
+    * Depending on the values, the program prints if you got it right or not and either adds or removes money from saved data.
+
+    * Basic Good Decision
+        <img src="./docs/features/good_decision.PNG">
+    * Basic Bad Decision
+        <img src="./docs/features/bad_decision.PNG">
+    * Caught a potential spy
+        <img src="./docs/features/good_forbidden.PNG">
+    * Missed a potential spy
+        <img src="./docs/features/bad_forbidden.PNG">   
+
+  * End section.
+
+    * End screen with a retry option.
+    * Prints total earned money, gives yes/no input to go again.
+
+        <img src="./docs/features/money_repeat.PNG">
+
+ * Game Over section.
+
+    * Game Over section.
+    * Prints out Game Over in ASCII.
+
+        <img src="./docs/features/random_person.PNG">
