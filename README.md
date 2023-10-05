@@ -16,6 +16,13 @@ View the live site: [Border Scrutiny](https://border-scrutiny-32912c92d278.herok
 
 * [Features](#features)
 
+* [Testing](#testing)
+  * [CI Python Linter](#linter)
+  * [Solved Bugs](#solved-bugs)
+  * [Known Bugs](#known-bugs)
+  * [Functional testing](#functional-testing)
+  * [Missed Opportunity](#missed-opportunity)
+
 ## Design
 
 ### Colours
@@ -115,3 +122,91 @@ We will go trough the features of the game now.
     * Prints out Game Over in ASCII.
 
         <img src="./docs/features/game_over.PNG">
+
+## Technologies Used
+
+* [Visual Studio Code](https://code.visualstudio.com) - To code the website.
+
+* [Git](https://git-scm.com) - For version control.
+
+* [Github](https://github.com) - To save and store the files for the website.
+
+* [Google Dev Tools](https://developer.chrome.com/docs/devtools/) - To troubleshoot and test features, solve issues with responsiveness and styling.
+
+* [Pexels](https://www.pexels.com/) - To acquire royalty free images.
+
+* [Pixlr](https://pixlr.com/) - To edit the images to fit the theme of the website.
+
+* [Heroku](https://www.heroku.com) - To deploy finished project.
+
+### Languages Used
+
+* The project was developed using Python as a main language.
+* The structure of the website was modified using HTML.
+* The website was styled using CSS.
+
+
+## Testing
+
+### Linter
+* Python
+  * No errors were returned when passing through the official [Code Institute Python Linter](https://pep8ci.herokuapp.com)
+
+![Linter Results](./docs/validation/linter.PNG)
+
+### Solved Bugs
+
+1. Python linter showing newline error.
+      
+     
+      <img src="./docs/bugs/newline_bug.PNG>
+ 
+      This issue was solved by adding an empty line after calling the main function.
+
+
+### Known Bugs
+
+No bugs were found by when testing the final version of the website.
+
+### Functional Testing
+
+## Deployment & Local Development
+
+### Deployment
+
+The site was created using the Visual Studio code editor and pushed to github to the remote repository ‘border-scrutiny’.
+
+Heroku was used to deploy the live website. The instructions to achieve this are below:
+
+1. Log in (or sign up) to Github.
+2. Find the repository for this project on github, border-scrutiny and copy the link. 
+3. Log in (or sign up) to Heroku.
+4. Click new on the dashboard and select 'Create new app' from the drop down menu.
+5. Choose app name and select your region.
+6. Go to Settings.
+7. Press Reveal Config Vars and add the following: in KEY write PORT, in VALUE write 8000.
+8. Add buildpacks python and nodejs in that order.
+9. Press deploy on menu above.
+10. Connect to github, paste your repository link here and press connect.
+11. After connecting choose Deploy Branch.
+12. Your project is now deployed!
+
+### Local Development
+
+#### How to Fork
+
+To fork the border-scrutiny repository:
+
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, bidran/border-scrutiny.
+3. Click the Fork button in the top right corner.
+
+#### How to Clone
+
+To clone the border-scrutiny repository:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, bidran/border-scrutiny.
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
