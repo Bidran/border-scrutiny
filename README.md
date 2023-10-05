@@ -51,7 +51,7 @@ We will go trough the features of the game now.
     * An introduction of 'Border Scrutiny'.
     * Gives title of the game and starts the game.
 
-        <img src="./docs/features/home_screen.PNG">
+        <img src="./docs/features/intro_screen.PNG">
 
  * Name Section.
 
@@ -84,7 +84,7 @@ We will go trough the features of the game now.
  * Documents section.
 
     * A person who has to be compared with forbidden values.
-    * Pulls the random values from lists, creates a person.
+    * Pulls the random values from lists. Creates a person with a face, first name, last name, country, age and possessions.
 
         <img src="./docs/features/random_person.PNG">
 
