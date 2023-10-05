@@ -55,13 +55,24 @@ faces = [
 ]
 
 
-def makePerson():
+"""
+ANSI color values which are used throughout the code.
+"""
+red = '\033[0;31m'
+white = "\033[0m"
+green = '\033[0;32m'
+yellow = '\033[0;33m'
 
+
+# Money value, used as score
+money = 0
+
+
+def makePerson():
     """
     Chooses a random choice between a man and a woman
     functions and returns the choice.
     """
-
     persons = [makeMan(), makeWoman()]
     chosen = random.choice(persons)
     return chosen
@@ -104,15 +115,6 @@ def newLine():
     Makes space for readability.
     """
     print('\n')
-
-
-"""
-ANSI color values which are used throughout the code.
-"""
-red = '\033[0;31m'
-white = "\033[0m"
-green = '\033[0;32m'
-yellow = '\033[0;33m'
 
 
 def randomRule():
@@ -177,10 +179,6 @@ def firstPerson():
           f"                   |{white}"
           f"Possession: {first_person_possession}{yellow}|\n"),
     print(f'|______________________________________________________|{white}\n')
-
-
-# Money value, used as score
-money = 0
 
 
 def beginGame():
