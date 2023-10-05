@@ -49,6 +49,11 @@ possession = [
     'USB Stick', 'Broom', 'Rollerblades', 'Fidget Spinner', 'Lightbulb'
     ]
 
+faces = [
+    '(˚ㄥ_˚)', '(◡‿◡✿)', 'ಠ‿ಠ', '(° ͜ʖ͡°)', '(҂◡_◡)', '(•ˋ _ ˊ•)', '(ಠ_ಠ)',
+    '(⊙_◎)'
+]
+
 
 def makePerson():
 
@@ -66,26 +71,28 @@ def makeMan():
     """
     Pulls random values from lists which will create a profile of a man.
     """
-    global random_fname, random_lname, age, random_country, random_possession
+    global random_fname, random_lname, age, random_country, random_possession, random_face
     random_fname = random.choice(first_name_men)
     random_lname = random.choice(last_name_men)
     age = random.choice(range(20, 29))
     random_country = random.choice(origin_country)
     random_possession = random.choice(possession)
-    return random_fname, random_lname, age, random_country, random_possession
+    random_face = random.choice(faces)
+    return random_fname, random_lname, age, random_country, random_possession, random_face
 
 
 def makeWoman():
     """
     Pulls random values from lists which will create a profile of a woman.
     """
-    global random_fname, random_lname, age, random_country, random_possession
+    global random_fname, random_lname, age, random_country, random_possession, random_face
     random_fname = random.choice(first_name_women)
     random_lname = random.choice(last_name_women)
     age = random.choice(range(20, 29))
     random_country = random.choice(origin_country)
     random_possession = random.choice(possession)
-    return random_fname, random_lname, age, random_country, random_possession
+    random_face = random.choice(faces)
+    return random_fname, random_lname, age, random_country, random_possession, random_face
 
 
 def newLine():
@@ -146,16 +153,20 @@ def firstPerson():
     global first_person_age
     global first_person_country
     global first_person_possession
+    global first_random_face
     first_person = makePerson()
     first_person_name = first_person[0]
     first_person_surname = first_person[1]
     first_person_age = first_person[2]
     first_person_country = first_person[3]
     first_person_possession = first_person[4]
+    first_random_face = first_person[5]
     newLine()
     print(f'{yellow} __________________________________________________'
           f'_____\n')
-    print(f"|  |{white}Name: {first_person_name} {first_person_surname}"
+    print(f"| {green}{first_random_face}{yellow}\n")
+    print(f"|{white}Name:"
+          f" {first_person_name} {first_person_surname}"
           f"{yellow}|     |{white}Country: {first_person_country}{yellow}|\n")
     print('|------------------------------------------------------|\n')
     print(f"|  |{white}Age: {first_person_age}{yellow}|"
@@ -167,6 +178,13 @@ def firstPerson():
 # Money value, used as score
 money = 0
 
+def randomFace():
+    """
+    Creates a random face out of list
+    """
+    random_face = random.choice(faces)
+    
+    
 
 def beginGame():
     """
